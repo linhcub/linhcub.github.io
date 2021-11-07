@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Le Van Linh's Resume</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Style the body */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 10px auto;
+      width: 75%;
+    }
+
+    h2 {
+      font-family: Montserrat;
+      color: #244666;
+      margin: 0px;
+    }
+
+    h3 {
+      font-family: Montserrat;
+    }
+
+    .position {
+      display: block;
+      font-weight: bold;
+    }
+
+    .company {
+      font-weight: bold;
+      font-style: italic;
+      font-size: 20px;
+      color: salmon;
+    }
+
+    .place {
+      font-size: 13px;
+      font-style: italic;
+      color: #999
+    }
+
+    .workplace {
+      margin-top: 10px;
+      padding: 10px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15)
+    }
+
+    #name {
+      font-weight: bold;
+      font-size: 29px;
+    }
+
+    /* Header/logo Title */
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .avatar-container {
+      flex: 30%;
+      background-color: #f8f9fa;
+      padding: 10px;
+    }
+
+    .avatar {
+      background-image: url(./img/avatar.jpg);
+      background-size: 700px;
+      background-position-x: -269px;
+      background-position-y: -190px;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      margin: auto;
+      border-radius: 50%;
+    }
+
+    .bio {
+      flex: 70%;
+      background-color: #e9ecef;
+      padding: 50px 20px;
+    }
+
+    /* Column container */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* Create two unequal columns that sits next to each other */
+    /* Sidebar/left column */
+    .side {
+      flex: 30%;
+      background-color: #e9ecef;
+      padding: 20px;
+    }
+
+    /* Main column */
+    .main {
+      flex: 70%;
+      background-color: #f8f9fa;
+      padding: 20px;
+    }
+
+    .tags {
+      list-style: none;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .tags li {
+      float: left;
+    }
+
+    .tag {
+      background: #eee;
+      border-radius: 3px 0 0 3px;
+      color: #999;
+      display: inline-block;
+      height: 26px;
+      line-height: 26px;
+      padding: 0 20px 0 23px;
+      position: relative;
+      margin: 0 10px 10px 0;
+      text-decoration: none;
+      -webkit-transition: color 0.2s;
+      font-size: 14px;
+    }
+
+    .tag::before {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+      content: '';
+      height: 6px;
+      left: 10px;
+      position: absolute;
+      width: 6px;
+      top: 10px;
+    }
+
+    .tag::after {
+      background: #fff;
+      border-bottom: 13px solid transparent;
+      border-left: 10px solid #eee;
+      border-top: 13px solid transparent;
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .tag:hover {
+      background-color: crimson;
+      color: white;
+    }
+
+    .tag:hover::after {
+      border-left-color: crimson;
+    }
+
+    .project {
+      display: block;
+      background-color: #ffe4f3;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding-left: 4px;
+    }
+
+    .techbranch {
+      border: outset 1px;
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 700px) {
+      body {
+        width: 100%;
+      }
+
+      .row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="avatar-container">
+      <div class="avatar"></div>
+    </div>
+    <div class="bio">
+      <span id="name">Le Van Linh</span>
+      <p>Hi there. After having an incredible time working in Japan for 4 Cherry Blossom seasons, I come back to Vietnam to find new challenges for the next journey in my life.</p>
+      <p></p>
+    </div>
+  </div>
+
+  <!-- The flexible grid (content) -->
+  <div class="row">
+    <div class="side">
+      <h2>CONTACT</h2>
+      <address>
+        +84 843 051 051<br>
+        <a href="mailto:levanlinhcube@gmail.com">levanlinhcube@gmail.com</a><br>
+        Vinh Thuy, Vinh Linh, Quang Tri, Vietnam
+      </address>
+      <hr>
+
+      <h2>EDUCATION</h2>
+      <img src="./img/LogoBKDN.jpg" width="50px"><br>
+      Danang University Of Science And Technology <br>
+      Excellence Engineer Training Program PFIEV <br>
+      THE DEGREE OF ENGINEER <br>
+      IN INFORMATION TECHNOLOGY<br>
+      SOFTWARE ENGINEERING
+      <hr>
+
+      <h2>LANGUAGE</h2>
+      <img src="./img/vn.svg" alt="Vietnamese" width="15px"> Vietnamese (NATIVE)<br>
+      <img src="./img/gb.svg" alt="English" width="15px"> English (TOEIC 770)<br>
+      <img src="./img/jp.svg" alt="Japanese" width="15px"> Japanese (JLPT N3)
+      <hr>
+
+      <h2>HARD SKILL</h2>
+      - Fullstack Web Developer<br>
+      - Speaking English at intermediate level<br>
+      - Speaking Japanese at a basic level<br>
+      - Having experience working abroad with international environment
+      <hr>
+
+      <h2>TECH SKILL</h2>
+      - Building a frontend with VueJS (HTML, CSS, JavaScript, TypeScript, NodeJS)<br>
+      - Object-oriented programming with Java, Python<br>
+      - Designing Database and using SQL to with it<br>
+      - Building a backend API (RESTful API) with Flask or Ruby On Rails<br>
+      - Automating web browsers with Selenium Webdriver<br>
+      - Having certain knowledge in Design Pattern<br>
+      - Understanding Agile methodology<br>
+      - Understanding GIT workflow in development process<br>
+      - Quick learner to adopt other programming languages, frameworks, or technologies
+      <hr>
+
+      <h2>INTERESTS</h2>
+      - Bitcoin / BlockChain / NFT<br>
+      - Machine Learning / AI<br>
+      <hr>
+
+      <h2>FAVORITE</h2>
+      <img src="./img/barcelona.png" alt="" height="40px">
+      <img src="./img/gopro.png" alt="" height="40px">
+      <hr>
+
+      <h2>SOCIAL ACTIVITY</h2>
+      - Volunteer in the mountain area<br>
+      - Supporting student activities
+    </div>
+
+    <div class="main">
+      <h2>WORK EXPERIENCE</h2>
+      <!-- System Integrator LTD -->
+      <div class="workplace">
+        <span class="company">System Integrator Corp</span><span class="place"> / Saitama City, Japan / March 2018 -
+          August 2021</span><br>
+        <span class="tag">Japanese-Speaking Environment</span><br>
+        <h3 class="project">Project 1 (6 months)</h3>
+        <span class="position">SYSTEM ENGINEER</span>
+        <p>Building a desktop app to capture, detect and label objects, preparing training data for AI model</p>
+        <img class="techbranch" src="./img/python.png" alt="">
+        <img class="techbranch" src="./img/kivy.jpeg" alt="">
+        <img class="techbranch" src="./img/opencv.png" alt="">
+
+        <h3 class="project">Project 2 (12 months)</h3>
+        <span class="position">SYSTEM ENGINEER</span>
+        <p>Building a web app to manage training data for AI model</p>
+        <img class="techbranch" src="./img/vuejs.png" alt="">
+        <img class="techbranch" src="./img/flask.png" alt="">
+        <img class="techbranch" src="./img/postgresql.png" alt="">
+        <img class="techbranch" src="./img/swagger.png" alt="">
+
+        <h3 class="project">Project 3 (18 months)</h3>
+        <span class="position">SYSTEM ENGINEER</span>
+        <p>Joining to develop a Project Management web app</p>
+        <img class="techbranch" src="./img/vuejs.png" alt="">
+        <img class="techbranch" src="./img/typescript.jpeg" alt="">
+        <img class="techbranch" src="./img/dotnetcore.png" alt="">
+        <img class="techbranch" src="./img/sqlserver.jpeg" alt="">
+        <img class="techbranch" src="./img/selenium.png" alt="">
+        <img class="techbranch" src="./img/swagger.png" alt="">
+
+        <h3 class="project">Project 4 (6 months)</h3>
+        <span class="position">SYSTEM ENGINEER</span>
+        <p>Maintaining and version up ERP platform named Grandit</p>
+        <img class="techbranch" src="./img/aspnet.jpg" alt="">
+      </div>
+
+      <!-- Code Engine Studio -->
+      <div class="workplace">
+        <span class="company">Code Engine Studio</span><span class="place"> / Danang City, Vietnam / January 2017 - June
+          2017</span>
+        <ul class="tags">
+          <li class="tag">English-Speaking Environment</li>
+          <li class="tag">Agile, Scrum</li>
+        </ul>
+        <span class="position">INTERNSHIP (6 months)</span>
+        <p>Building a Time Converter web app</p>
+        <img class="techbranch" src="./img/angularjs.webp" alt="">
+        <img class="techbranch" src="./img/nodejs.png" alt="">
+        <img class="techbranch" src="./img/mongodb.png" alt="">
+
+        <p>Doing my final Thesis - Creating Working Time Management web app</p>
+        <img class="techbranch" src="./img/rubyonrails.png" alt="">
+        <img class="techbranch" src="./img/postgresql.png" alt="">
+      </div>
+
+      <!-- Danang software development centre -->
+      <div class="workplace">
+        <span class="company">Danang Software Development Centre</span><span class="place"> / Danang City, Vietnam /
+          April 2015 - June 2015</span><br>
+        <span class="tag">Vietnamese-Speaking Environment</span>
+        <span class="position">INTERNSHIP (3 months)</span>
+
+        <p>Building a web app using Lavarel framework</p>
+        <img class="techbranch" src="./img/php.png" alt="">
+        <img class="techbranch" src="./img/mysql.png" alt="">
+        <img class="techbranch" src="./img/laravel.png" alt="">
+
+        <p>Creating Moodle theme</p>
+        <img class="techbranch" src="./img/php.png" alt="">
+        <img class="techbranch" src="./img/moodle.png" alt="">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
