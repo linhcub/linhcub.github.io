@@ -13,25 +13,20 @@
       box-sizing: border-box;
     }
 
-    /* Style the body */
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Montserrat;
       margin: 10px auto;
       width: 75%;
     }
 
-    h2 {
-      font-family: Montserrat;
+    .section-title {
+      font-weight: bold;
+      font-size: 18px;
       color: #244666;
       margin: 0px;
     }
 
-    h3 {
-      font-family: Montserrat;
-    }
-
     .position {
-      display: block;
       font-weight: bold;
     }
 
@@ -43,9 +38,8 @@
     }
 
     .place {
-      font-size: 13px;
+      font-size: 15px;
       font-style: italic;
-      color: #999
     }
 
     .workplace {
@@ -57,9 +51,9 @@
     #name {
       font-weight: bold;
       font-size: 29px;
+      color: #244666;
     }
 
-    /* Header/logo Title */
     .header {
       display: flex;
       flex-wrap: wrap;
@@ -87,100 +81,51 @@
     .bio {
       flex: 70%;
       background-color: #e9ecef;
-      padding: 50px 20px;
+      padding: 75px 20px;
     }
 
-    /* Column container */
     .row {
       display: flex;
       flex-wrap: wrap;
     }
 
-    /* Create two unequal columns that sits next to each other */
-    /* Sidebar/left column */
     .side {
       flex: 30%;
       background-color: #e9ecef;
       padding: 20px;
     }
 
-    /* Main column */
     .main {
       flex: 70%;
       background-color: #f8f9fa;
       padding: 20px;
     }
 
-    .tags {
-      list-style: none;
-      margin: 0;
-      overflow: hidden;
-      padding: 0;
-    }
-
-    .tags li {
-      float: left;
-    }
-
-    .tag {
-      background: #eee;
-      border-radius: 3px 0 0 3px;
-      color: #999;
-      display: inline-block;
-      height: 26px;
-      line-height: 26px;
-      padding: 0 20px 0 23px;
-      position: relative;
-      margin: 0 10px 10px 0;
-      text-decoration: none;
-      -webkit-transition: color 0.2s;
-      font-size: 14px;
-    }
-
-    .tag::before {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
-      content: '';
-      height: 6px;
-      left: 10px;
-      position: absolute;
-      width: 6px;
-      top: 10px;
-    }
-
-    .tag::after {
-      background: #fff;
-      border-bottom: 13px solid transparent;
-      border-left: 10px solid #eee;
-      border-top: 13px solid transparent;
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-
-    .tag:hover {
-      background-color: crimson;
-      color: white;
-    }
-
-    .tag:hover::after {
-      border-left-color: crimson;
+    #education {
+      padding-top: 15px;
+      padding-left: 10px;
     }
 
     .project {
       display: block;
-      background-color: #ffe4f3;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      background-color: #e9ecef;
+      margin-top: 15px;
       padding-left: 4px;
+      font-size: 16px;
+      font-weight: bold;
     }
 
-    .techbranch {
-      border: outset 1px;
-      height: 30px;
-      margin-right: 10px;
+    ul {
+      margin-bottom: 0;
+    }
+
+    .task {
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .tech {
+      margin-left: 40px;
     }
 
     /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
@@ -202,146 +147,233 @@
   <div class="header">
     <div class="avatar-container">
       <div class="avatar"></div>
+      <span id="name">Le Van Linh</span>
     </div>
     <div class="bio">
-      <span id="name">Le Van Linh</span>
-      <p>Hi there. After having an incredible time working in Japan for 4 Cherry Blossom seasons, I come back to Vietnam to find new challenges for the next journey in my life.</p>
-      <p></p>
+      <div class="section-title">ABOUT ME</div>
+      <p>Hi there. After having an incredible time working in Japan for 4 Cherry Blossom seasons, I come back to Vietnam
+        to find new challenges for the next journey in my life.</p>
     </div>
   </div>
 
   <!-- The flexible grid (content) -->
   <div class="row">
     <div class="side">
-      <h2>CONTACT</h2>
+      <div class="section-title">CONTACT</div>
       <address>
-        +84 843 051 051<br>
-        <a href="mailto:levanlinhcube@gmail.com">levanlinhcube@gmail.com</a><br>
-        Vinh Thuy, Vinh Linh, Quang Tri, Vietnam
+        <ul>
+          <li><span style="font-style: normal;">Tel:</span> <a href="tel:+84843051051">+84 843 051 051</a></li>
+          <li><span style="font-style: normal;">Email:</span> <a
+              href="mailto:levanlinhcube@gmail.c">levanlinhcube@gmail.com</a></li>
+          <li><span style="font-style: normal;">Facebook:</span> <a href="https://www.facebook.com/levanlinhcube"
+              target="_blank">fb.com/levanlinhcube</a></li>
+          <li><span style="font-style: normal;">Address:</span> <a href="https://goo.gl/maps/TT4tUbCDkrpJYQWN8"
+              target="_blank">129 Ngu Hanh Son, Danang
+              City,
+              Vietnam</a></li>
+        </ul>
       </address>
       <hr>
 
-      <h2>EDUCATION</h2>
-      <img src="./img/LogoBKDN.jpg" width="50px"><br>
-      Danang University Of Science And Technology <br>
-      Excellence Engineer Training Program PFIEV <br>
-      THE DEGREE OF ENGINEER <br>
-      IN INFORMATION TECHNOLOGY<br>
-      SOFTWARE ENGINEERING
+      <div class="section-title">EDUCATION</div>
+      <div id="education">
+        <span>THE DEGREE OF ENGINEER</span><br>
+        <span style="font-style: italic;">Information Technology - Software Engineering</span><br>
+        <span style="font-weight: bold;">Danang University Of Science & Technology</span>
+      </div>
+
       <hr>
 
-      <h2>LANGUAGE</h2>
-      <img src="./img/vn.svg" alt="Vietnamese" width="15px"> Vietnamese (NATIVE)<br>
-      <img src="./img/gb.svg" alt="English" width="15px"> English (TOEIC 770)<br>
-      <img src="./img/jp.svg" alt="Japanese" width="15px"> Japanese (JLPT N3)
+      <div class="section-title">LANGUAGE</div>
+      <ul>
+        <li>Vietnamese (NATIVE)</li>
+        <li>English (TOEIC 770)</li>
+        <li>Japanese (JLPT N3)</li>
+      </ul>
       <hr>
 
-      <h2>HARD SKILL</h2>
-      - Fullstack Web Developer<br>
-      - Speaking English at intermediate level<br>
-      - Speaking Japanese at a basic level<br>
-      - Having experience working abroad with international environment
+      <div class="section-title">SKILL</div>
+      <ul>
+        <li>Object-oriented programming</li>
+        <li>Relational database design</li>
+        <li>Develop frontend with VueJS</li>
+        <li>Develop backend with RESTful API</li>
+        <li>Understand Agile methodology</li>
+        <li>Understand GIT workflow</li>
+        <li>Quick learner to adopt different programming languages, frameworks, or technologies</li>
+      </ul>
+
       <hr>
 
-      <h2>TECH SKILL</h2>
-      - Object-oriented programming with Java, Python<br>
-      - Designing Database and using SQL to work with it<br>
-      - Building a frontend with VueJS (HTML, CSS, JavaScript, TypeScript, NodeJS)<br>
-      - Building a backend API (RESTful API) with Flask or Ruby On Rails<br>
-      - Automating web browsers with Selenium Webdriver<br>
-      - Having certain knowledge in Design Pattern<br>
-      - Understanding Agile methodology<br>
-      - Understanding GIT workflow in the development process<br>
-      - Quick learner to adopt other programming languages, frameworks, or technologies
+      <div class="section-title">INTERESTS</div>
+      <ul>
+        <li>Bitcoin</li>
+        <li>AI</li>
+      </ul>
+
       <hr>
 
-      <h2>INTERESTS</h2>
-      - Bitcoin / BlockChain / NFT<br>
-      - Machine Learning / AI<br>
+      <div class="section-title">FAVORITE</div>
+      <ul>
+        <li>Football</li>
+        <li>Travel</li>
+      </ul>
+
       <hr>
 
-      <h2>FAVORITE</h2>
-      <img src="./img/barcelona.png" alt="" height="40px">
-      <img src="./img/gopro.png" alt="" height="40px">
-      <hr>
-
-      <h2>SOCIAL ACTIVITY</h2>
-      - Volunteer in the mountain area<br>
-      - Supporting student activities
+      <div class="section-title">SOCIAL ACTIVITY</div>
+      <ul>
+        <li>Volunteer in the mountain area</li>
+        <li>Supporting student activities</li>
+      </ul>
     </div>
 
     <div class="main">
-      <h2>WORK EXPERIENCE</h2>
-      <!-- System Integrator LTD -->
+      <div class="section-title">WORK EXPERIENCE</div>
+      <!-- System Integrator Corp -->
       <div class="workplace">
-        <span class="company">System Integrator Corp</span><span class="place"> / Saitama City, Japan / March 2018 -
-          August 2021</span><br>
-        <span class="tag">Japanese-Speaking Environment</span><br>
-        <h3 class="project">Project 1 (6 months)</h3>
-        <span class="position">SYSTEM ENGINEER</span>
-        <p>Building a desktop app to capture, detect and label objects, preparing training data for AI model</p>
-        <img class="techbranch" src="./img/python.png" alt="">
-        <img class="techbranch" src="./img/kivy.jpeg" alt="">
-        <img class="techbranch" src="./img/opencv.png" alt="">
+        <a class="company" href="https://www.sint.co.jp/">System Integrator Corp</a>
+        <span class="place"> / Saitama City, Japan / March 2018 - August 2021</span><br>
+        work as <span class="position">DEVELOPER</span>
+        <div class="project">Project #1 (18 months) - <a href="https://products.sint.co.jp/aisia-ad"
+            target="_blank">AISIA-AD Anomaly
+            Detection</a></div>
 
-        <h3 class="project">Project 2 (12 months)</h3>
-        <span class="position">SYSTEM ENGINEER</span>
-        <p>Building a web app to manage training data for AI model</p>
-        <img class="techbranch" src="./img/vuejs.png" alt="">
-        <img class="techbranch" src="./img/flask.png" alt="">
-        <img class="techbranch" src="./img/postgresql.png" alt="">
-        <img class="techbranch" src="./img/swagger.png" alt="">
+        <ul><span class="task">Prepare training data for AI model</span>
+          <li>Build a desktop app to capture, detect and label objects
+            <ul>
+              <li>Build the app UI using Kivy</li>
+              <li>Connect external camera and capture frames</li>
+              <li>Image processing with OpenCV to detect and label objects</li>
+            </ul>
+          </li>
+          <li>Use above app to prepare training data of different kind of objects</li>
+        </ul>
+        <span class="tech">
+          <a href="http://" target="_blank">python</a>,
+          <a href="http://" target="_blank">kivy</a>,
+          <a href="http://" target="_blank">opencv</a>
+        </span>
 
-        <h3 class="project">Project 3 (18 months)</h3>
-        <span class="position">SYSTEM ENGINEER</span>
-        <p>Joining to develop a Project Management web app</p>
-        <img class="techbranch" src="./img/vuejs.png" alt="">
-        <img class="techbranch" src="./img/typescript.jpeg" alt="">
-        <img class="techbranch" src="./img/dotnetcore.png" alt="">
-        <img class="techbranch" src="./img/sqlserver.jpeg" alt="">
-        <img class="techbranch" src="./img/selenium.png" alt="">
-        <img class="techbranch" src="./img/swagger.png" alt="">
+        <ul><span class="task">Build a desktop app to monitor Anomaly Detection by AI</span>
+          <li>Build UI with Kivy framework</li>
+          <li>Combine app with trained AI model</li>
+        </ul>
+        <span class="tech">
+          <a href="http://" target="_blank">python</a>,
+          <a href="http://" target="_blank">kivy</a>,
+          <a href="http://" target="_blank">opencv</a>
+        </span>
 
-        <h3 class="project">Project 4 (6 months)</h3>
-        <span class="position">SYSTEM ENGINEER</span>
-        <p>Maintaining and version up ERP platform named Grandit</p>
-        <img class="techbranch" src="./img/aspnet.jpg" alt="">
+        <ul><span class="task">Build a web app to manage training data for AI model</span>
+          <li>Build frontend with Vuejs</li>
+          <li>Build backend with Flask</li>
+        </ul>
+        <span class="tech">
+          <a href="http://" target="_blank">vuejs</a>,
+          <a href="http://" target="_blank">flask</a>,
+          <a href="http://" target="_blank">postgresql</a>,
+          <a href="http://" target="_blank">swagger</a>
+        </span>
+
+        <div class="project">Project #2 (18 months) - <a href="https://products.sint.co.jp/obpm" target="_blank">OBPMneo
+            Project Management App Webization</a>
+        </div>
+        <ul><span class="task">Be a member to webize the existing Project Management Desktop App</span>
+          <li>Design and implement all forms
+            <ul>
+              <li>Create API to get form data from server</li>
+              <li>Retrieve form data from API by Vue</li>
+              <li>Export forms to printable PDF format</li>
+            </ul>
+          </li>
+          <li>Internationalization by translating from Japanese to English</li>
+          <li>Automate web browsers with Selenium Webdriver for UI testing</li>
+        </ul>
+        <span class="tech">
+          <a href="http://" target="_blank">vuejs</a>,
+          <a href="http://" target="_blank">typescript</a>,
+          <a href="http://" target="_blank">C#</a>,
+          <a href="http://" target="_blank">dotnetcore</a>,
+          <a href="http://" target="_blank">sqlserver</a>,
+          <a href="http://" target="_blank">selenium</a>,
+          <a href="http://" target="_blank">swagger</a>
+        </span>
+
+        <div class="project">Project #3 (06 months) - <a href="https://products.sint.co.jp/grandit" target="_blank">ERP
+            platform Grandit Maintainning & Version Up</a></div>
+        <ul><span class="task">Maintaining</span>
+          <li>Fix bugs</li>
+        </ul>
+        <ul><span class="task">Production Management Module Version up</span>
+          <li>Basic Design</li>
+          <li>Detail Design</li>
+          <li>Write Test document</li>
+          <li>Implementation</li>
+          <li>Unit test</li>
+        </ul>
+        <span class="tech">
+          <a href="http://" target="_blank">aspnet</a>,
+          <a href="http://" target="_blank">sqlserver</a>
+        </span>
       </div>
 
       <!-- Code Engine Studio -->
       <div class="workplace">
-        <span class="company">Code Engine Studio</span><span class="place"> / Danang City, Vietnam / January 2017 - June
-          2017</span>
-        <ul class="tags">
-          <li class="tag">English-Speaking Environment</li>
-          <li class="tag">Agile, Scrum</li>
+        <a class="company" href="https://www.codeenginestudio.com/">Code Engine Studio</a><span class="place"> / Danang
+          City, Vietnam / January 2017 - June
+          2017</span><br>
+        have <span class="position">INTERNSHIP</span>
+        <div class="project">Project #1 (03 months) - Timezone Converter Web App Development</div>
+        <ul><span class="task">Responsible for backend side</span>
+          <li>Build RESTful API using NodeJS</li>
+          <li>Use Swagger to document the APIs</li>
+          <li>Use Postman to interact with the APIs</li>
         </ul>
-        <span class="position">INTERNSHIP (6 months)</span>
-        <p>Building a Time Converter web app</p>
-        <img class="techbranch" src="./img/angularjs.webp" alt="">
-        <img class="techbranch" src="./img/nodejs.png" alt="">
-        <img class="techbranch" src="./img/mongodb.png" alt="">
+        <span class="tech">
+          <a href="http://" target="_blank">nodejs</a>,
+          <a href="http://" target="_blank">mongodb</a>
+        </span>
 
-        <p>Doing my final Thesis - Creating Working Time Management web app</p>
-        <img class="techbranch" src="./img/rubyonrails.png" alt="">
-        <img class="techbranch" src="./img/postgresql.png" alt="">
+        <div class="project">Project #2 (06 months) - Working Time Management Web App Development</div>
+        <ul><span class="task">Responsible for backend side</span>
+          <li>Build RESTful API using Ruby On Rails</li>
+          <li>Use Swagger to document the APIs</li>
+          <li>Use Postman to interact with the APIs</li>
+        </ul>
+
+        <span class="tech">
+          <a href="http://" target="_blank">rubyonrails</a>,
+          <a href="http://" target="_blank">postgresql</a>
+        </span>
+
       </div>
 
       <!-- Danang software development centre -->
       <div class="workplace">
-        <span class="company">Danang Software Development Centre</span><span class="place"> / Danang City, Vietnam /
+        <a class="company" href="https://sdc.udn.vn/">Danang Software Development Centre</a><span class="place"> /
+          Danang City, Vietnam /
           April 2015 - June 2015</span><br>
-        <span class="tag">Vietnamese-Speaking Environment</span>
-        <span class="position">INTERNSHIP (3 months)</span>
+        have <span class="position">INTERNSHIP</span>
 
-        <p>Building a web app using Lavarel framework</p>
-        <img class="techbranch" src="./img/php.png" alt="">
-        <img class="techbranch" src="./img/mysql.png" alt="">
-        <img class="techbranch" src="./img/laravel.png" alt="">
+        <div class="project">Project #1 (01 month) - Moodle Theme Development</div>
+        <ul><span class="task">Create Moodle theme</span>
+        </ul>
+        <span class="tech">
+          <a href="http://" target="_blank">php</a>,
+          <a href="http://" target="_blank">moodle</a>
+        </span>
 
-        <p>Creating Moodle theme</p>
-        <img class="techbranch" src="./img/php.png" alt="">
-        <img class="techbranch" src="./img/moodle.png" alt="">
+        <div class="project">Project #2 (02 months) - Lavarel Web App Development</div>
+        <ul><span class="task">Build a web app using Lavarel framework</span>
+        </ul>
+        <span class="tech">
+          <a href="http://" target="_blank">php</a>,
+          <a href="http://" target="_blank">mysql</a>,
+          <a href="http://" target="_blank">laravel</a>
+        </span>
+
+
       </div>
     </div>
   </div>
