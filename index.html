@@ -54,6 +54,10 @@
       color: #244666;
     }
 
+    #job-title {
+      font-weight: bold;
+    }
+
     .header {
       display: flex;
       flex-wrap: wrap;
@@ -76,6 +80,7 @@
       height: 200px;
       margin: auto;
       border-radius: 50%;
+      filter: brightness(120%)
     }
 
     .bio {
@@ -89,20 +94,24 @@
       flex-wrap: wrap;
     }
 
-    .side {
+    #side {
       flex: 30%;
       background-color: #e9ecef;
       padding: 20px;
     }
 
-    .main {
+    #side ul {
+      padding-left: 25px;
+    }
+
+    #main {
       flex: 70%;
       background-color: #f8f9fa;
       padding: 20px;
     }
 
     #education {
-      padding-top: 15px;
+      padding-top: 7px;
       padding-left: 10px;
     }
 
@@ -115,20 +124,32 @@
       font-weight: bold;
     }
 
-    ul {
-      margin-bottom: 0;
+    .project-description {
+      margin-left: 5px;
     }
 
-    .task {
+    ul {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .task-container {
+      margin-bottom: 20px;
+    }
+
+    .task-header {
+      margin-left: 28px;
+    }
+
+    .task-name {
       font-style: italic;
       font-weight: bold;
     }
 
     .tech {
-      margin-left: 40px;
+      margin-left: 27px;
     }
 
-    /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
     @media screen and (max-width: 700px) {
       body {
         width: 100%;
@@ -147,18 +168,20 @@
   <div class="header">
     <div class="avatar-container">
       <div class="avatar"></div>
-      <span id="name">Le Van Linh</span>
+      <span id="name">Le Van Linh</span><br>
+      <span id="job-title">Software Engineer</span>
     </div>
     <div class="bio">
-      <div class="section-title">ABOUT ME</div>
-      <p>Hi there. After having an incredible time working in Japan for 4 Cherry Blossom seasons, I come back to Vietnam
-        to find new challenges for the next journey in my life.</p>
+      <div class="section-title">Hello World!</div>
+      <p>My name is Linh, a developer and a football lover. <br>
+        After 4 Cherry Blossom seasons working in Japan, I came back to Vietnam to find new challenges for the next
+        journey in my life.</p>
     </div>
   </div>
 
   <!-- The flexible grid (content) -->
   <div class="row">
-    <div class="side">
+    <div id="side">
       <div class="section-title">CONTACT</div>
       <address>
         <ul>
@@ -179,12 +202,12 @@
       <div id="education">
         <span>THE DEGREE OF ENGINEER</span><br>
         <span style="font-style: italic;">Information Technology - Software Engineering</span><br>
-        <span style="font-weight: bold;">Danang University Of Science & Technology</span>
+        <span style="font-weight: bold;">Danang University Of Science And Technology</span>
       </div>
 
       <hr>
 
-      <div class="section-title">LANGUAGE</div>
+      <div class="section-title">LANGUAGES</div>
       <ul>
         <li>Vietnamese (NATIVE)</li>
         <li>English (TOEIC 770)</li>
@@ -192,15 +215,14 @@
       </ul>
       <hr>
 
-      <div class="section-title">SKILL</div>
+      <div class="section-title">SKILLS</div>
       <ul>
         <li>Object-oriented programming</li>
         <li>Relational database design</li>
-        <li>Develop frontend with VueJS</li>
-        <li>Develop backend with RESTful API</li>
-        <li>Understand Agile methodology</li>
-        <li>Understand GIT workflow</li>
-        <li>Quick learner to adopt different programming languages, frameworks, or technologies</li>
+        <li>VueJS</li>
+        <li>RESTful API</li>
+        <li>GIT workflow</li>
+        <li>Quick learner to adopt different programming languages, frameworks, and technologies</li>
       </ul>
 
       <hr>
@@ -213,7 +235,7 @@
 
       <hr>
 
-      <div class="section-title">FAVORITE</div>
+      <div class="section-title">FAVORITES</div>
       <ul>
         <li>Football</li>
         <li>Travel</li>
@@ -221,161 +243,273 @@
 
       <hr>
 
-      <div class="section-title">SOCIAL ACTIVITY</div>
+      <div class="section-title">SOCIAL ACTIVITIES</div>
       <ul>
-        <li>Volunteer in the mountain area</li>
+        <li>Volunteering in mountain areas</li>
         <li>Supporting student activities</li>
       </ul>
     </div>
 
-    <div class="main">
+    <div id="main">
       <div class="section-title">WORK EXPERIENCE</div>
       <!-- System Integrator Corp -->
       <div class="workplace">
         <a class="company" href="https://www.sint.co.jp/">System Integrator Corp</a>
         <span class="place"> / Saitama City, Japan / March 2018 - August 2021</span><br>
-        work as <span class="position">DEVELOPER</span>
+        Position: <span class="position">SOFTWARE ENGINEER</span>
         <div class="project">Project #1 (18 months) - <a href="https://products.sint.co.jp/aisia-ad"
-            target="_blank">AISIA-AD Anomaly
-            Detection</a></div>
+            target="_blank">AISIA-AD Anomaly Detection</a>
+        </div>
+        <p class="project-description">
+          The project develops a system powered by AI to monitor production lines to detect
+          defective products.
+        </p>
 
-        <ul><span class="task">Prepare training data for AI model</span>
-          <li>Build a desktop app to capture, detect and label objects
-            <ul>
-              <li>Build the app UI using Kivy</li>
-              <li>Connect external camera and capture frames</li>
-              <li>Image processing with OpenCV to detect and label objects</li>
-            </ul>
-          </li>
-          <li>Use above app to prepare training data of different kind of objects</li>
-        </ul>
-        <span class="tech">
-          <a href="http://" target="_blank">python</a>,
-          <a href="http://" target="_blank">kivy</a>,
-          <a href="http://" target="_blank">opencv</a>
-        </span>
+        <div class="task-container">
+          <div class="task-header">
+            <span class="task-name">Building a desktop app to collect training data for the AI model</span><br>
+            <span>
+              One of the tasks is how to teach the AI to recognize the product objects.
+              To do that we provide the AI with a lot of training data.
+              A sample data includes an image and information about the position of objects under JSON format.
+            </span>
+          </div>
+          <ul>
+            <li>Building the UI using Kivy framework</li>
+            <li>Connecting external camera to capture frames</li>
+            <li>Image processing with OpenCV to detect and label objects</li>
+          </ul>
+          <span class="tech">
+            <a href="https://www.python.org/" target="_blank">python</a>,
+            <a href="https://kivy.org/" target="_blank">kivy</a>,
+            <a href="https://opencv.org/" target="_blank">opencv</a>
+          </span>
+        </div>
 
-        <ul><span class="task">Build a desktop app to monitor Anomaly Detection by AI</span>
-          <li>Build UI with Kivy framework</li>
-          <li>Combine app with trained AI model</li>
-        </ul>
-        <span class="tech">
-          <a href="http://" target="_blank">python</a>,
-          <a href="http://" target="_blank">kivy</a>,
-          <a href="http://" target="_blank">opencv</a>
-        </span>
+        <div class="task-container">
+          <div class="task-header">
+            <span class="task-name">Building a desktop app to monitor Anomaly Detection by AI</span><br>
+            <span>
+              This app will control the Anomaly Detection process.
+              Being powered by trained AI, the app plays an important role in the Anomaly Detection System.
+              It allows performing the Anomaly Detection process in real-time.
+            </span>
+          </div>
+          <ul>
+            <li>Building the UI using Kivy framework</li>
+            <li>Combining the app with the trained AI model</li>
+          </ul>
+          <span class="tech">
+            <a href="https://www.python.org/" target="_blank">python</a>,
+            <a href="https://kivy.org/" target="_blank">kivy</a>,
+            <a href="https://opencv.org/" target="_blank">opencv</a>
+          </span>
+        </div>
 
-        <ul><span class="task">Build a web app to manage training data for AI model</span>
-          <li>Build frontend with Vuejs</li>
-          <li>Build backend with Flask</li>
-        </ul>
-        <span class="tech">
-          <a href="http://" target="_blank">vuejs</a>,
-          <a href="http://" target="_blank">flask</a>,
-          <a href="http://" target="_blank">postgresql</a>,
-          <a href="http://" target="_blank">swagger</a>
-        </span>
+        <div class="task-container">
+          <div class="task-header">
+            <span class="task-name">Building a web app to manage the results from the Anomaly Detection</span><br>
+            <span>This app helps us to categorize the detected results whether one product is a good or bad one.
+              It also allows customers to review the detected result whether it is correct or not.
+              In case a detected result is incorrect, customers can fix that by giving it the correct category.
+              These fixes will be used for retraining the AI model.
+            </span>
+          </div>
+          <ul>
+            <li>Building the frontend with VueJS</li>
+            <li>Building the backend with Flask</li>
+          </ul>
+          <span class="tech">
+            <a href="https://vuejs.org/" target="_blank">vuejs</a>,
+            <a href="https://flask.palletsprojects.com/" target="_blank">flask</a>,
+            <a href="https://www.postgresql.org/" target="_blank">postgresql</a>,
+            <a href="https://swagger.io/" target="_blank">swagger</a>
+          </span>
+        </div>
 
         <div class="project">Project #2 (18 months) - <a href="https://products.sint.co.jp/obpm" target="_blank">OBPMneo
             Project Management App Webization</a>
         </div>
-        <ul><span class="task">Be a member to webize the existing Project Management Desktop App</span>
-          <li>Design and implement all forms
-            <ul>
-              <li>Create API to get form data from server</li>
-              <li>Retrieve form data from API by Vue</li>
-              <li>Export forms to printable PDF format</li>
-            </ul>
-          </li>
-          <li>Internationalization by translating from Japanese to English</li>
-          <li>Automate web browsers with Selenium Webdriver for UI testing</li>
-        </ul>
-        <span class="tech">
-          <a href="http://" target="_blank">vuejs</a>,
-          <a href="http://" target="_blank">typescript</a>,
-          <a href="http://" target="_blank">C#</a>,
-          <a href="http://" target="_blank">dotnetcore</a>,
-          <a href="http://" target="_blank">sqlserver</a>,
-          <a href="http://" target="_blank">selenium</a>,
-          <a href="http://" target="_blank">swagger</a>
-        </span>
+        <p class="project-description">
+          The company has an existing Project Management app for desktop version
+          and wants to make a web version for it.
+          This is a big project with a lot of modules.
+          The web version uses a modern web architecture using VueJS for the frontend and ASP.NET Core for the backend.
+        </p>
 
-        <div class="project">Project #3 (06 months) - <a href="https://products.sint.co.jp/grandit" target="_blank">ERP
-            platform Grandit Maintainning & Version Up</a></div>
-        <ul><span class="task">Maintaining</span>
-          <li>Fix bugs</li>
-        </ul>
-        <ul><span class="task">Production Management Module Version up</span>
-          <li>Basic Design</li>
-          <li>Detail Design</li>
-          <li>Write Test document</li>
-          <li>Implementation</li>
-          <li>Unit test</li>
-        </ul>
-        <span class="tech">
-          <a href="http://" target="_blank">aspnet</a>,
-          <a href="http://" target="_blank">sqlserver</a>
-        </span>
+        <div class="task-container">
+          <div class="task-header">
+            <span class="task-name">Exporting all forms to PDF</span><br>
+            <span>In the Project Management app, there are a lot of types of forms that need to be exported to PDF
+              that can be printable like Project Planning Form, Progress Report, Invoice, etc.
+              The exported data of a form must be retrieved from the server.
+            </span>
+          </div>
+          <ul>
+            <li>Creating API to get form data from the server</li>
+            <li>Retrieving form data through API by VueJS</li>
+            <li>Exporting form with retrieved data to printable PDF</li>
+          </ul>
+          <span class="tech">
+            <a href="https://vuejs.org/" target="_blank">vuejs</a>,
+            <a href="https://www.typescriptlang.org/" target="_blank">typescript</a>,
+            <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank">C#</a>,
+            <a href="https://dotnet.microsoft.com/en-us/learn/aspnet/what-is-aspnet-core"
+              target="_blank">dotnetcore</a>,
+            <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads" target="_blank">sqlserver</a>,
+            <a href="https://swagger.io/" target="_blank">swagger</a>
+          </span>
+        </div>
+
+        <div class="task-container">
+          <div class="task-header">
+            <span class="task-name">Internationalization</span><br>
+            <span>
+              The desktop version only supports Japanese
+              but the web version also wants to support English which helps the app goes global.
+            </span>
+            <ul>
+              <li>Translating all labels, messages in the app from Japanese to English</li>
+              <li>Storing language files in JSON format</li>
+            </ul>
+          </div>
+          <span class="tech">
+            <a href="https://kazupon.github.io/vue-i18n/" target="_blank">vuei18n</a>
+          </span>
+        </div>
+
+        <div class="task-container">
+          <div class="task-header">
+            <span class="task-name">Automating web browsers with Selenium Webdriver for UI testing</span><br>
+            <span>In the app, there are hundreds of pages with hundreds of URLs.
+              It needs to make sure all pages can be accessed by different devices, operating systems, and web browsers.
+              It is really hard to make it done manually. So I have to automate the test.
+              Let's code once and make it run on multiple platforms.
+            </span>
+          </div>
+          <span class="tech">
+            <a href="https://www.python.org/" target="_blank">python</a>,
+            <a href="https://www.selenium.dev/documentation/webdriver/" target="_blank">seleniumwebdriver</a>
+          </span>
+        </div>
+
+        <div class="project">Project #3 (06 months) - <a href="https://products.sint.co.jp/grandit"
+            target="_blank">Grandit Maintainning & Version Up</a>
+        </div>
+        <p class="project-description">
+          Grandit is a cloud-based ERP platform that provides an integrated and continuously updated view of core
+          business processes.
+        </p>
+        <div class="task-container">
+          <div class="task-header">
+            <span class="task-name">Maintaining</span><br>
+            <span>Fixing bugs in both old and current versions</span>
+          </div>
+          <span class="tech">
+            <a href="https://dotnet.microsoft.com/en-us/apps/aspnet" target="_blank">aspnet</a>,
+            <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads" target="_blank">sqlserver</a>
+          </span>
+        </div>
+
+        <div class="task-container">
+          <div class="task-header">
+            <span class="task-name">Production Management Module Version up</span><br>
+            <span> Developing new features for the module.
+            </span>
+          </div>
+          <span class="tech">
+            <a href="https://dotnet.microsoft.com/en-us/apps/aspnet" target="_blank">aspnet</a>,
+            <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads" target="_blank">sqlserver</a>
+          </span>
+        </div>
+
       </div>
 
       <!-- Code Engine Studio -->
       <div class="workplace">
-        <a class="company" href="https://www.codeenginestudio.com/">Code Engine Studio</a><span class="place"> / Danang
-          City, Vietnam / January 2017 - June
-          2017</span><br>
-        have <span class="position">INTERNSHIP</span>
-        <div class="project">Project #1 (03 months) - Timezone Converter Web App Development</div>
-        <ul><span class="task">Responsible for backend side</span>
-          <li>Build RESTful API using NodeJS</li>
-          <li>Use Swagger to document the APIs</li>
-          <li>Use Postman to interact with the APIs</li>
-        </ul>
-        <span class="tech">
-          <a href="http://" target="_blank">nodejs</a>,
-          <a href="http://" target="_blank">mongodb</a>
-        </span>
+        <a class="company" href="https://www.codeenginestudio.com/">Code Engine Studio</a>
+        <span class="place"> / Danang City, Vietnam / October 2016 - June 2017</span><br>
+        Position: <span class="position">INTERNSHIP</span>
+        <div class="project">Project #1 (03 months) - World Clock Web App Development</div>
+        <p class="project-description">
+          Depending on time zones, time is different between places in the world.
+          World Clock is a web app that allows people to view multiple clocks for different places at the same time.
+          To put it simply, the app plays the role of a timezone converter.
+          This project has 2 developers. I am responsible for the backend side and
+          another for the frontend side.
+        </p>
+        <div class="task-container">
+          <div class="task-header">
+            <span class="task-name">Developing all APIs for the app</span><br>
+          </div>
+          <ul>
+            <li>Building RESTful API using NodeJS</li>
+            <li>Using Swagger to document the APIs</li>
+            <li>Using Postman to interact with the APIs</li>
+          </ul>
+          <span class="tech">
+            <a href="https://nodejs.org/" target="_blank">nodejs</a>,
+            <a href="https://www.mongodb.com/" target="_blank">mongodb</a>,
+            <a href="https://swagger.io/" target="_blank">swagger</a>
+          </span>
+        </div>
 
         <div class="project">Project #2 (06 months) - Working Time Management Web App Development</div>
-        <ul><span class="task">Responsible for backend side</span>
-          <li>Build RESTful API using Ruby On Rails</li>
-          <li>Use Swagger to document the APIs</li>
-          <li>Use Postman to interact with the APIs</li>
-        </ul>
-
-        <span class="tech">
-          <a href="http://" target="_blank">rubyonrails</a>,
-          <a href="http://" target="_blank">postgresql</a>
-        </span>
+        <p class="project-description">
+          Working Time Management is an app that allows people to manage their tasks and track time for each task they
+          do.
+          This project has 2 developers. I am responsible for the backend side and another for the frontend side.
+        </p>
+        <div class="task-container">
+          <div class="task-header">
+            <span class="task-name">Developing all APIs for the app</span><br>
+          </div>
+          <ul>
+            <li>Building RESTful API using Ruby On Rails</li>
+            <li>Using Swagger to document the APIs</li>
+            <li>Using Postman to interact with the APIs</li>
+          </ul>
+          <span class="tech">
+            <a href="https://rubyonrails.org/" target="_blank">rubyonrails</a>,
+            <a href="https://www.postgresql.org/" target="_blank">postgresql</a>,
+            <a href="https://swagger.io/" target="_blank">swagger</a>
+          </span>
+        </div>
 
       </div>
 
       <!-- Danang software development centre -->
       <div class="workplace">
-        <a class="company" href="https://sdc.udn.vn/">Danang Software Development Centre</a><span class="place"> /
-          Danang City, Vietnam /
-          April 2015 - June 2015</span><br>
-        have <span class="position">INTERNSHIP</span>
+        <a class="company" href="https://sdc.udn.vn/">Danang Software Development Centre</a>
+        <span class="place"> / Danang City, Vietnam / April 2015 - June 2015</span><br>
+        Position: <span class="position">INTERNSHIP</span>
 
         <div class="project">Project #1 (01 month) - Moodle Theme Development</div>
-        <ul><span class="task">Create Moodle theme</span>
-        </ul>
+        <p class="project-description">
+          Moodle is the world's most popular learning management system.
+          Like WordPress, Moodle was one of the CMS platforms that I got to know very first when I came to the world of
+          PHP.
+          There are lots of Moodle themes out there, but developing one by myself is a best practice to dive
+          into the world of Moodle.
+        </p>
         <span class="tech">
-          <a href="http://" target="_blank">php</a>,
-          <a href="http://" target="_blank">moodle</a>
+          <a href="https://www.php.net/" target="_blank">php</a>,
+          <a href="https://moodle.org/" target="_blank">moodle</a>
         </span>
 
         <div class="project">Project #2 (02 months) - Lavarel Web App Development</div>
-        <ul><span class="task">Build a web app using Lavarel framework</span>
-        </ul>
+        <p class="project-description">
+          After covering basic PHP knowledge, I challenge myself to develop a web app using Lavarel - a PHP web
+          application framework.
+        </p>
         <span class="tech">
-          <a href="http://" target="_blank">php</a>,
-          <a href="http://" target="_blank">mysql</a>,
-          <a href="http://" target="_blank">laravel</a>
+          <a href="https://www.php.net/" target="_blank">php</a>,
+          <a href="https://www.mysql.com/" target="_blank">mysql</a>,
+          <a href="https://laravel.com/" target="_blank">laravel</a>
         </span>
-
-
       </div>
     </div>
+  </div>
   </div>
 </body>
 
